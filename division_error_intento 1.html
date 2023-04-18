@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+    const throwError = () => {
+        let x = prompt('Introduce el dividendo');
+        let y = prompt('Introduce el divisor');
+    try{
+        if (isNaN(y)) throw 'Valor ingresado en divisor no es un numero'
+        if (y == '') throw 'Vacio no es un numero valido para el divisor';
+        if (x == '') throw 'Vacio no es un numero valido para el divisor';
+        x = Number(x);
+        y = Number(y);
+        if (y == '0') throw 'Cero no es un numero valido para el divisor';
+        if (y < 0) throw 'Numero negativo no es un numero valido para el divisor';
+        }/* catch(error){
+            console.log('error name: '+ error.name);
+        }*/finally{
+        console.log(`El resultado de la division de ${x}/${y} es = ` + (x / y)); 
+        }
+    }
+
+throwError();
+    </script>
+</body>
+</html>

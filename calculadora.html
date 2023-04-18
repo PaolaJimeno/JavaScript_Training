@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function suma(a,b) {
+    return a+b
+    }
+    function resta(a,b) {
+    return a-b
+    }
+    function multiplicacion(a,b) {
+        return a*b
+    }
+    function division(a,b) {
+    return a/b
+    /*
+    if (Number.isFinite(x) && Number.isFinite(y) && y !== 0) {
+        console.log(x / y);
+    } else {
+        console.log("Argumentos incorrectos para realizar la division");
+    }
+    */
+    }
+    function operaciones(funcion,numeroA,numeroB) {
+        return funcion(numeroA,numeroB)
+    }
+    let decision = true;
+    while (decision != false && decision != "s") { 
+    // Corregido el operador lógico para evaluar si la decisión 
+    // es diferente de false y diferente de "s"
+            let funcion = ''; 
+            funcion = prompt("Ingrese la operacion que desea realizar, suma, resta,multiplicacion, division");
+            let primerOperando = prompt("Ingrese el primer valor");
+            let primerOp = Number(primerOperando)
+            let segundoOperando = prompt("Ingrese el segundo valor");
+            let segundoOp = Number(segundoOperando)
+            let resultado = operaciones(eval(funcion), primerOp, segundoOp); 
+            // Corregido el llamado a la función operaciones para que tome
+            // como primer parámetro la función evaluada y se guardó el resultado 
+            // en una variable para mostrarlo en un alert
+             window.alert("El resultado es: " + resultado);    
+        decision = window.prompt('Desea realizar una nueva operacion matematica?, para salir ingrese s');
+    } 
+    </script>
+</body>
+</html>

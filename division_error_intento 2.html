@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+    function div(dividendo, divisor) {
+        if (divisor === 0) {
+          throw new RangeError("El divisor no puede ser cero.");
+        }
+        return dividendo / divisor;
+      }
+
+      try {
+        let dividendo = prompt("Ingresa el dividendo:");
+        let divisor = prompt("Ingresa el divisor:");
+
+        dividendo = Number(dividendo);
+        divisor = Number(divisor);
+
+        const resultado = div(dividendo, divisor);
+
+        alert(`El resultado de la división es: ${resultado}`);
+      } catch (error) {
+        alert(error.message);
+      }
+    </script>
+</body>
+</html>
