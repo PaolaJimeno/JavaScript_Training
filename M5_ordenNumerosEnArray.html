@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function ordenAscendente(arrayTest){
+            if( arrayTest instanceof Array){
+            let ordenASC = arrayTest.sort((a,b)=>(a-b))
+            console.log(ordenASC);
+            } 
+            console.log('error');
+        }
+        function ordenDescendente(arrayTest){
+            if( arrayTest instanceof Array){
+            let ordenDesc = arrayTest.sort((a,b)=>(b-a))
+            console.log(ordenDesc);
+            }
+        }
+
+        let numeros = [50,10,40,30,20];
+        let x = alert(`El array a order es: ${numeros}`);
+        let option = prompt('Introduzca la opcion que desee para el orden de los numeros de el array: \n1-Orden en forma ascendente \n2-Orden en forma descendente \n3-Salir ');
+        console.log(option);
+        switch (option) {
+            case '1': 
+            ordenAscendente(numeros);
+                break; 
+            case '2': 
+            ordenDescendente(numeros);
+                break;       
+            case '3': 
+                break; 
+            default: console.log(`Ha ingresado una opcion no valida`);
+        }
+    </script>
+</body>
+</html>

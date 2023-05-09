@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let listaDeNombres = [
+            {
+                nombre: 'Maxwell Wright',
+                telefono: '(0191) 719 6495',
+                correo: 'Curabitur.egestas.nunc@nonummyac.co.uk'
+            },
+            {
+                nombre: 'Raja Villarreal',
+                telefono: '(0191) 719 6495',
+                correo: 'posuere.vulputate@sed.com'
+            },
+            {
+                nombre: 'Helen Richards',
+                telefono: '0800 1111',
+                correo: 'libero@convallis.edu'
+            }
+        ]
+    function showContact(list,index) {
+        let x = list instanceof Array;
+        let y = list.length;
+        if( x = true && index < y)
+        console.log(`Contacto en la posicion ${index}`,list[index]);
+        else 
+        console.log(`La lista no tiene tantos contactos, ingrese un numero menor que  ${index}`);
+        
+    }
+    function showAllContacts(list) {
+        let x = list instanceof Array;
+        if( x = true)
+        console.log('Todos los contactos', list)
+        else 
+        console.log("Lista no es un array");
+    }
+    function addNewContact(list, name, phone, mail) {
+        let newContact = {
+            nombre: name,
+            telefono: phone,
+            correo: mail
+            }        
+            listaDeNombres.push(newContact);
+    }
+    let option = '';
+    do {
+        option = prompt("Ingrese la opcion que desea realizar \n1-Ver informacion de un contacto de la lista \n2-Ver toda la lista de contactos \n3-Agregar 1 nuevo contacto \n4-Salir");
+        console.log(option);
+        switch (option) {
+            case '1': 
+                index = prompt("Ingrese la posicion de la lista que quiere mostrar, primer contacto en la posicion 0"); 
+                showContact(listaDeNombres,index)
+                break; 
+            case '2': 
+                showAllContacts(listaDeNombres);
+                break;       
+            case '3': 
+                name = prompt("Ingrese el nombre"),
+                phone = prompt("Ingrese el telefono"),
+                mail = prompt("Ingrese el correo")
+                addNewContact(listaDeNombres, name, phone, mail);
+                break; 
+            case '4': 
+               break; 
+            default: console.log(`Ha ingresado una opcion no valida`);
+        }
+}while (option != '4')
+    </script>
+</body>
+</html>
