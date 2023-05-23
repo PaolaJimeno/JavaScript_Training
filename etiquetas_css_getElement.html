@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <!-- comentario -->
+    <h1 id="id">encabezado principal</h1> 
+    <h1>encabezado 1.1</h1>
+    <h1>encabezado 1.2</h1>
+    <h2 id="subtitulo1">SUBTITULO 2.1</h2>
+    <h2 id="subtitulo2">SUBTITULO 2.2</h2>
+    <h3 class="class3">encabezado 3</h3>
+    <h3 class="class3">encabezado 4</h3>
+    <h3 class="class3">encabezado 5</h3>
+    <p>esta es una etiqueta de parrafo</p>
+    <b>boton 1</b>
+    <b>boton 2</b>
+    <script>
+        const x = document.getElementsByTagName('h1')
+        console.log(x)  // es una lista y la lista tiene un tamano
+        console.log(x.length)
+        const y = document.getElementById('subtitulo2')
+        console.log(y)
+        const z = document.getElementsByClassName('class3')
+        console.log(z)
+
+        console.log('---------------------------------------------------------------')
+
+        let primerVariable = document.querySelector('h1') // querySelector sabe que me refiero a todos los elementos con etiqueta h1
+        let segundaVariable = document.querySelector('#subtitulo2') // '#'' hace referencia a Id y '.' hace referencia a clase
+        let terceraVariable = document.querySelector('.class3') // solo retornara el 1er elemento de cada lista o grupo
+        console.log(primerVariable)
+        console.log(segundaVariable)
+        console.log(terceraVariable) // solo retornara el 1er elemento de cada lista o grupo
+
+        console.log('----------------COLECCION DE LAS ETIQUETAS-----------------')
+        // para retornar todos los elementos de la lista y no solo el 1ero, debemos usar un iterador (for)
+        let primerVariableTodasLasEtiquetas = document.querySelectorAll('h1') // notar, querySelector lleva ALL
+        for (let i=0; i<primerVariableTodasLasEtiquetas.length; i++){
+            console.log(primerVariableTodasLasEtiquetas[i])
+        }
+
+        console.log('----------------AGREGAR ATRIBUTOS-----------------')
+        let titulos=document.querySelectorAll()
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+body{
+    font-family: sans-serif;
+    text-align: center;
+    background-color: #45caeb;
+}
+h1{
+    margin-top: 50px;
+    border:5px solid #10e9a1;
+}
+#character-list{
+    display: flex;
+    flex-wrap: wrap;
+    list-style:none;
+    padding: 0;
+}
+.character{
+    margin: 10px;
+    border:5px solid #101fe9;
+    border-radius: 5px;
+    width:200px;
+    text-align: center;
+}
+.character img{
+    max-width: 100%;
+    height: auto;
+}
+.character h2{
+    margin: 10px;
+}
